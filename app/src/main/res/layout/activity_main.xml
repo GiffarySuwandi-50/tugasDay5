@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -8,19 +8,25 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <EditText
         android:id="@+id/etNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:hint="Nama"></EditText>
+        android:hint="@string/nama_hint"
+        android:autofillHints=""/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipe Pelanggan"
+        android:text="@string/tvTipePelanggan"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
     </TextView>
@@ -36,37 +42,49 @@
             android:id="@+id/rbGold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gold"/>
+            android:text="@string/membership_gold"/>
         <RadioButton
             android:id="@+id/rbSilver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Silver"/>
+            android:text="@string/membership_silver"/>
         <RadioButton
             android:id="@+id/rbPeasant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Biasa"/>
+            android:text="@string/membership_biasa"/>
     </RadioGroup>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <EditText
         android:id="@+id/etKodeBarang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Kode Barang"/>
-    <EditText
+        android:hint="@string/kodebarang_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <EditText
         android:id="@+id/etJumlahBarang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Jumlah Barang"/>
+        android:hint="@string/jumlahbarang_hint"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btnProses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Proses"/>
+        android:text="@string/button_proses"/>
 "</LinearLayout>

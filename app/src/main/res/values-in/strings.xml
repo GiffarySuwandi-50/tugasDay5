@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Giffary Arfalino Suwandi Quiz 1</string>
+    <string name="nama_hint">Nama</string>
+    <string name="membership_gold">Emas</string>
+    <string name="membership_silver">Perak</string>
+    <string name="membership_biasa">Biasa</string>
+    <string name="kodebarang_hint">Kode Barang</string>
+    <string name="jumlahbarang_hint">Jumlah Barang</string>
+    <string name="button_proses">Proses!</string>
+    <string name="tvTipePelanggan">Tipe Pelanggan</string>
+    <string name="tv_congrats">Terima kasih telah berbelanja disini!</string>
+    <string name="buttonShare">Bagikan</string>
+    <string name="greetings_customer">Selamat Datang</string>
+    <string name="tipe_member_result">"Tipe Member: "</string>
+    <string name="today_transaction">Transaksi Hari Ini</string>
+    <string name="item_code_transaction">"Kode Barang: "</string>
+    <string name="item_name_transaction">"Nama Barang: "</string>
+    <string name="price_transaction">"Harga: "</string>
+    <string name="price_total_transaction">"Total Harga: "</string>
+    <string name="price_discount_transaction">"Discount Harga: "</string>
+    <string name="member_discount_transaction">"Discount Member: "</string>
+    <string name="total_payment_transaction">"Jumlah Bayar: "</string>
+</resources>

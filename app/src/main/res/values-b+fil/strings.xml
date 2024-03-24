@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Giffary Arfalino Suwandi Quiz 1</string>
+    <string name="nama_hint">Pangalan</string>
+    <string name="membership_gold">Ginto</string>
+    <string name="membership_silver">Pilak</string>
+    <string name="membership_biasa">Normal</string>
+    <string name="kodebarang_hint">Item Code</string>
+    <string name="jumlahbarang_hint">Ang Dami Ng Kalakal</string>
+    <string name="button_proses">Proseso!</string>
+    <string name="tvTipePelanggan">Uri ng Customer</string>
+    <string name="tv_congrats">Salamat sa pamimili dito!</string>
+    <string name="buttonShare">Ibahagi</string>
+    <string name="greetings_customer">"Welcome "</string>
+    <string name="tipe_member_result">"Uri ng Membership: "</string>
+    <string name="today_transaction">"Mga Transaksyon Ngayon: "</string>
+    <string name="item_code_transaction">"Item code: "</string>
+    <string name="item_name_transaction">"Pangalan ng mga kalakal: "</string>
+    <string name="price_transaction">"Presyo: "</string>
+    <string name="price_total_transaction">"Kabuuang presyo: "</string>
+    <string name="price_discount_transaction">"Diskwento sa Presyo: "</string>
+    <string name="member_discount_transaction">"Mga Diskwento sa Membership: "</string>
+    <string name="total_payment_transaction">"Kabuuang bayad: "</string>
+</resources>

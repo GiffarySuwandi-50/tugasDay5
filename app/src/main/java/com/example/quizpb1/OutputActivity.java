@@ -40,7 +40,6 @@ public class OutputActivity extends AppCompatActivity {
         double hargaSatuan = 0;
         String namaBarang = null;
         int totalHarga;
-        int diskon = 0;
         double totalHargaSetelahDiskon;
         switch (Objects.requireNonNull(kodeBarang)) {
             case "AV4":
@@ -91,28 +90,27 @@ public class OutputActivity extends AppCompatActivity {
         String diskonMembershipFormatted = formatter.format(diskonMembership);
         String totalHargaSetelahDiskonFormatted = formatter.format(totalHargaSetelahDiskon);
 
-        tvPembeli.setText("Selamat Datang " + namaPembeli);
-        tvMembership.setText("Tipe Member: " + membershipTerpilih);
+        tvPembeli.setText(getString(R.string.greetings_customer) + namaPembeli);
+        tvMembership.setText(getString(R.string.tipe_member_result) + membershipTerpilih);
         tvTransaksi.setText(
-                "Transaksi Hari Ini" +
-                        "\nKode Barang: " + kodeBarang +
-                        "\nNama Barang " + namaBarang +
-                        "\nHarga: " + hargaSatuanFormatted +
-                        "\nTotal Harga: " + totalHargaFormatted +
-                        "\nDiscount Harga: " + diskonDiatas10JutaFormatted +
-                        "\nDiscount Member: " + diskonMembershipFormatted +
-                        "\nJumlah Bayar: " + totalHargaSetelahDiskonFormatted);
+                getString(R.string.today_transaction) + "\n" +
+                        getString(R.string.item_code_transaction) + kodeBarang  + "\n" +
+                        getString(R.string.item_name_transaction) + namaBarang  + "\n" +
+                        getString(R.string.price_transaction) + hargaSatuanFormatted + "\n" +
+                        getString(R.string.price_total_transaction) + totalHargaFormatted + "\n" +
+                        getString(R.string.price_discount_transaction) + diskonDiatas10JutaFormatted + "\n" +
+                        getString(R.string.member_discount_transaction) + diskonMembershipFormatted + "\n" +
+                        getString(R.string.total_payment_transaction) + totalHargaSetelahDiskonFormatted);
 
         //Bagikan! (Intent Implisit)
         String finalNamaBarang = namaBarang;
-        String finalTotalHargaSetelahDiskonFormatted = totalHargaSetelahDiskonFormatted;
         Bagikan.setOnClickListener(v -> {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
             shareIntent.putExtra(
                     Intent.EXTRA_TEXT,
                     "Nama Barang : "+ finalNamaBarang +
-                    "\nMelakukan transaksi sebesar: " + finalTotalHargaSetelahDiskonFormatted +
+                    "\nMelakukan transaksi sebesar: " + totalHargaSetelahDiskonFormatted +
                     " pada aplikasi Giffary Arfalino Suwandi Quiz 1");
             startActivity(Intent.createChooser(shareIntent, "Bagikan melalui"));
         });
